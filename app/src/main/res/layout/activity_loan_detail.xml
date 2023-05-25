@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoanDetailActivity">
+
+    <Button
+        android:id="@+id/button_loanDetail_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_loanDetail_dateRepaid" />
+
+    <CheckBox
+        android:id="@+id/checkBox_loanDetail_isFullyRepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repaid?"
+        app:layout_constraintBottom_toTopOf="@+id/textView_loanDetail_dateLoaned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_loanDetail_amountStillOwed" />
+
+    <EditText
+        android:id="@+id/editText_loanDetail_initialLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:ems="10"
+        android:enabled="false"
+        android:focusable="true"
+        android:hint="Initial Loan"
+        android:inputType="none"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_loanDetail_amountRepaid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_loanDetail_borrower" />
+
+    <EditText
+        android:id="@+id/editText_loanDetail_amountRepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Amount Repaid"
+        android:inputType="none"
+        app:layout_constraintBottom_toTopOf="@+id/textView_loanDetail_amountStillOwed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_loanDetail_initialLoan" />
+
+    <EditText
+        android:id="@+id/editText_loanDetail_borrower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Name"
+        android:inputType="none"
+        app:layout_constraintBottom_toTopOf="@+id/editText_loanDetail_initialLoan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_loanDetail_dateRepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/button_loanDetail_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_loanDetail_dateLoaned"
+        tools:text="Date Repaid" />
+
+    <TextView
+        android:id="@+id/textView_loanDetail_dateLoaned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView_loanDetail_dateRepaid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_loanDetail_isFullyRepaid"
+        tools:text="Date Loaned" />
+
+    <TextView
+        android:id="@+id/textView_loanDetail_amountStillOwed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_loanDetail_isFullyRepaid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_loanDetail_amountRepaid"
+        tools:text="Calculated Amount Still Owed" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
